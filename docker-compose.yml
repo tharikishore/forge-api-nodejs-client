@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  auto-desk:
+    container_name: auto-desk-nj
+    image: dh.vivasa.in/vivasa/docker-kickstart:dev-nodejs-img-1.1
+    hostname: auto-desk-nj
+    volumes:
+     - ./:/sources
+    working_dir: /sources
+    tty: true
+    ports:
+     - 4000:4000
